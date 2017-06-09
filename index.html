@@ -28,7 +28,7 @@
   <div class="container">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" id="about">
           <h2>About Ping-Pong</h2>
           <p>Type in some number and let's see some ping-pong magic in the air (technically the page)</p>
           <br>
@@ -37,7 +37,7 @@
           <p><a href="https://github.com/Okwonks" title="WillisCode">Alber Oketch</a></p>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-8" id="right-col">
           <h2>Time to Start</h2>
           <div id="show-text">
             <p>Ping pong will count up to your number with the following exceptions:</p>
@@ -51,18 +51,22 @@
           <form id="pong-number">
             <div class="form-group">
               <label for="pingpong">Enter your number: </label>
-              <input type="text" id="pingpong">
+              <input type="text" id="ping-pong">
             </div>
 
             <button type="submit" class="btn btn-default">Find out!</button>
           </form>
         </div>
+
+        <div class="col-md-3" id="result">
+          <p><strong>Here's your result: </strong></p>
+          <ul id="ping-pong-list">
+            
+          </ul>
+
+        </div>
       </div>
     <!--end of div.row-->
-    <div id="result">
-      <p>Here's your result:</p>
-
-    </div>
     </div>
 <!--end of container-fluid-->
   </div>
