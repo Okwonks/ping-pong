@@ -10,11 +10,11 @@
 ## Project Specs:
 >On entering a number users should be able to:
 1. Read any number divisible by 3 as 'ping'
-..* **example input**: 9
-..* **example output**: ping
+⋅⋅* **example input**: 9
+⋅⋅* **example output**: ping
 2. Read any number divisible by 3 as 'ping'
-..* **example input**: 10
-..* **example output**: pong
+⋅⋅* **example input**: 10
+⋅⋅* **example output**: pong
 3. Read any number divisible by 3 as 'ping'
-..* **example input**: 10
-..* **example output**: pong
+⋅⋅* **example input**: 10
+⋅⋅* **example output**: pong
