@@ -1,40 +1,41 @@
 //business logic
-var userInput;
 var userNumber;
-
+// for (var i = 0; i < 10; i++) {
+//   array[i]
+// }
 var numberArr = [];
 
-console.log();
-var pingPong = function() {
-for (var index = 1; index <= userNumber; index++){
-  numberArr.push(index);
+var pingPong = function(userInput) {
+for (var index = 1; index <= userInput; index++){
 
-  numberArr.map(function(userInput) {
-
-  if (userInput % 3 && 5 === 0) {
-    userInput = "ping pong";      //returns ping pong for multiples of 3
-  } else if (userInput % 5 === 0){
-    userInput = "pong";           //returns pong for multiples of 5
-  } else if (userInput % 3 === 0) {
-    userInput = "ping";          //returns ping for multiples of 3
+  if ((index % 3 === 0) && (index % 5 === 0)) {
+    numberArr.push("pingpong");      //returns ping pong for multiples of 3
+  } else if (index % 5 === 0){
+    numberArr.push("pong");           //returns pong for multiples of 5
+  } else if (index % 3 === 0) {
+    numberArr.push("ping");          //returns ping for multiples of 3
   } else {
-    // return index;          //returns the number as it is
+    numberArr.push(index);          //returns the number as it is
   }
-  return userInput;
-});
-return;
-};
+}
+return numberArr;
 };
 
 //user interface logic
 $(document).ready(function() {
   $("form#pong-number").submit(function(event) {
     event.preventDefault();
-    userInput = parseInt($("input#ping-pong"));
-    var result = pingPong(userInput);
+    var userInput = parseInt($("input#ping-pong").val());
+    var results = pingPong(userInput);
+
+    $("#results").text("");
+    $("#results").append("<ul>");
+    results.forEach(function(result) {
+      $("#results").append('<li>' + result + '</li>');
+    });
+    $("#results").append("</ul>");
 
 
-
-    $("#result").fadeIn(3000).fadeOut(15000);
+    $("#results").fadeIn(3000).fadeOut(10000)
   });
 });
